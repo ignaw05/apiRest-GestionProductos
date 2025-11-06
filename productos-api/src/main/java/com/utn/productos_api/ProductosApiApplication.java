@@ -1,13 +1,13 @@
-package gestionproductos.gestion;
+package com.utn.productos_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GestionApplication {
+public class ProductosApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GestionApplication.class, args);
+		SpringApplication.run(ProductosApiApplication.class, args);
 	}
 
 }

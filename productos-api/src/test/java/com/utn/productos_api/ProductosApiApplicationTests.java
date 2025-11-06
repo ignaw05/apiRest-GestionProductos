@@ -1,10 +1,10 @@
-package gestionproductos.gestion;
+package com.utn.productos_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GestionApplicationTests {
+class ProductosApiApplicationTests {
 
 	@Test
 	void contextLoads() {
