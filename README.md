@@ -16,16 +16,16 @@ API REST completa para gestión de productos en un sistema de e-commerce básico
 
 ## ⚙️ Tecnologías Utilizadas
 
-| Tecnología | Versión | Descripción |
-|------------|---------|-------------|
-| Java | 17+ | Lenguaje de programación |
-| Spring Boot | 3.2.0 | Framework principal |
-| Spring Data JPA | 3.2.0 | Persistencia de datos |
-| H2 Database | - | Base de datos en memoria |
-| Bean Validation | - | Validación de datos |
-| Springdoc OpenAPI | 2.3.0 | Documentación Swagger |
-| Maven | 3.x | Gestión de dependencias |
-| Lombok | 1.18.30 | Reducción de boilerplate |
+| Tecnología | Descripción |
+|------------|-------------|
+| Java | Lenguaje de programación |
+| Spring Boot | Framework principal |
+| Spring Data JPA | Persistencia de datos |
+| H2 Database | Base de datos en memoria |
+| Bean Validation | Validación de datos |
+| Springdoc OpenAPI | Documentación Swagger |
+| Gradle |  Gestión de dependencias |
+| Lombok | Reducción de boilerplate |
 
 ---
 
@@ -64,9 +64,8 @@ productos-api/
 
 ### Prerrequisitos
 
-- Java JDK 17 o superior
-- Maven 3.x
-- IDE recomendado: IntelliJ IDEA, Eclipse o VS Code
+- Java JDK 21
+- Gradle
 
 ### 1. Clonar el Repositorio
 
@@ -118,10 +117,10 @@ La aplicación iniciará en `http://localhost:8080`
 curl -X POST http://localhost:8080/api/productos \
   -H "Content-Type: application/json" \
   -d '{
-    "nombre": "Laptop HP",
-    "descripcion": "Laptop HP 15.6 pulgadas, 8GB RAM, 256GB SSD",
-    "precio": 45000.00,
-    "stock": 10,
+    "nombre": "iPhone 17",
+    "descripcion": "Cosmic Orange",
+    "precio": 900,
+    "stock": 5,
     "categoria": "ELECTRONICA"
   }'
 ```
@@ -207,7 +206,7 @@ SELECT * FROM productos WHERE stock < 5;
 - ✅ Operaciones CRUD automáticas de Spring Data JPA
 
 ### Lógica de Negocio
-- ✅ Servicio con `@Transactional` y `@RequiredArgsConstructor` (inyección por constructor con Lombok)
+- ✅ Servicio con `@Transactional`
 - ✅ Conversión entre DTOs y entidades
 - ✅ **Regla de negocio**: no permite eliminar productos con stock > 0
 
