@@ -1,4 +1,5 @@
 # 🛒 API REST de Gestión de Productos - Spring Boot
+Ignacio Wuilloud - 51153
 
 ## 📄 Descripción del Proyecto
 
