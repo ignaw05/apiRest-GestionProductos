@@ -2,7 +2,9 @@ package com.utn.productos.dto;
 
 import com.utn.productos.model.Categoria;
 import com.utn.productos.model.Producto;
+import io.swagger.v3.oas.annotations.media.Schema;
 
+@Schema
 public record ProductoResponseDTO (
     Long id,
     String nombre,

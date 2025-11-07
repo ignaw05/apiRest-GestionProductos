@@ -2,6 +2,7 @@ package com.utn.productos.dto;
 
 import com.utn.productos.model.Categoria;
 import com.utn.productos.model.Producto;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,6 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
+@Schema
 public class ProductoDTO {
 
     @NotNull(message = "El nombre no puede ser nulo")
