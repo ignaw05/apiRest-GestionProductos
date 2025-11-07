@@ -139,7 +139,7 @@ La base de datos H2 incluye una consola web para ver y consultar datos.
 **Acceso**: `http://localhost:8080/h2-console`
 
 **Configuración de conexión**:
-- JDBC URL: `jdbc:h2:mem:productosdb`
+- JDBC URL: `jdbc:h2:file:./data/productosdb`
 - User Name: `sa`
 - Password: (dejar vacío)
 
@@ -179,7 +179,6 @@ SELECT * FROM productos WHERE stock < 5;
 ### Lógica de Negocio
 - ✅ Servicio con `@Transactional`
 - ✅ Conversión entre DTOs y entidades
-- ✅ **Regla de negocio**: no permite eliminar productos con stock > 0
 
 ### API REST
 - ✅ Controller con `@RequiredArgsConstructor` y todos los métodos HTTP
