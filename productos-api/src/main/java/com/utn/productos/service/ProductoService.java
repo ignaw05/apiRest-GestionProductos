@@ -9,6 +9,7 @@ import com.utn.productos.model.Producto;
 import com.utn.productos.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,18 +28,21 @@ public class ProductoService {
         return ProductoResponseDTO.fromEntity(prod);
     }
 
+    @Transactional(readOnly = true)
     public ProductoResponseDTO obtenerPorId(Long id){
         Producto prod = repo.findById(id)
                 .orElseThrow(() -> new ProductoNotFoundException("No se encontro el producto con id:"+id));
         return ProductoResponseDTO.fromEntity(prod);
     }
 
+    @Transactional(readOnly = true)
     public List<ProductoResponseDTO> obtenerTodos(){
         List<ProductoResponseDTO> productos = repo.findAll().stream().
                 map(ProductoResponseDTO::fromEntity).toList();
         return productos;
     }
 
+    @Transactional(readOnly = true)
     public List<ProductoResponseDTO> obtenerPorCategoria(Categoria categoria){
         List<ProductoResponseDTO> productos = repo.findByCategoria(categoria).stream()
                 .map(ProductoResponseDTO::fromEntity).toList();
