@@ -11,6 +11,11 @@ API REST completa para gestión de productos en un sistema de e-commerce básico
 - ✅ Manejo centralizado de excepciones
 - ✅ Documentación interactiva con Swagger/OpenAPI
 - ✅ Operaciones CRUD completas con todos los métodos HTTP
+---
+
+## USO
+Se puede probar desde esta UI
+https://ecommercefront-rho.vercel.app/
 
 ---
 
