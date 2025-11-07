@@ -139,7 +139,7 @@ La base de datos H2 incluye una consola web para ver y consultar datos.
 **Acceso**: `http://localhost:8080/h2-console`
 
 **Configuración de conexión**:
-- JDBC URL: `jdbc:h2:file:./data/productosdb`
+- JDBC URL: `jdbc:h2:file:/tmp/data/productosdb`
 - User Name: `sa`
 - Password: (dejar vacío)
 
