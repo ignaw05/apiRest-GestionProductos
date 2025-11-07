@@ -60,41 +60,6 @@ productos-api/
 
 ---
 
-## 🚀 Instrucciones de Instalación y Ejecución
-
-### Prerrequisitos
-
-- Java JDK 21
-- Gradle
-
-### 1. Clonar el Repositorio
-
-```bash
-git clone <URL-DEL-REPOSITORIO>
-cd productos-api
-```
-
-### 2. Compilar el Proyecto
-
-```bash
-mvn clean install
-```
-
-### 3. Ejecutar la Aplicación
-
-```bash
-mvn spring-boot:run
-```
-
-O ejecutar el JAR:
-```bash
-java -jar target/productos-api-1.0.0.jar
-```
-
-La aplicación iniciará en `http://localhost:8080`
-
----
-
 ## 🌐 Endpoints de la API
 
 | Método | Ruta | Descripción |
@@ -233,26 +198,26 @@ SELECT * FROM productos WHERE stock < 5;
 
 ### Swagger UI - Lista de Endpoints
 
-![endpoints.png](endpoints.png)
+![endpoints.png](pics/endpoints.png)
 
 ### Prueba POST - Crear Producto
 
-![addProducto.png](addProducto.png)
+![addProducto.png](pics/addProducto.png)
 
 ### Prueba GET - Listar Productos
 
-![getallproductos.png](getallproductos.png)
+![getallproductos.png](pics/getallproductos.png)
 
 ### Error 404 - Producto No Encontrado
 
-![getProductoById.png](getProductoById.png)
+![getProductoById.png](pics/getProductoById.png)
 
 ### Error 400 - Validación Fallida
 
-![actualizarStock.png](actualizarStock.png)
+![actualizarStock.png](pics/actualizarStock.png)
 
 ### Consola H2 - Tabla Productos
 
-![bdh2.png](bdh2.png)
+![bdh2.png](pics/bdh2.png)
 
 ---
